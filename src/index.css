@@ -1,0 +1,84 @@
+/* COLOR REUSABLE */
+:root {
+  --first-color: #B5D5C5;
+  --second-color: #8397C7;
+  --indaco: #7999ED;
+  --fourth-color: #A7D2CB;
+  --ice: #E5E6E8;
+  --ice-variant: #d8dce9;
+  --black: rgba(52,52,52,0.9);
+  --shadow: #2C2D2E;
+  --secondary-shadow: #998E9E;
+}
+
+/* 
+B5D5C5
+AAE3E2
+B4CDE6
+ */
+
+body {
+  /* MY SETTINGS */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--ice);
+
+  /*  CERATE-REACT-APP MAIN SETTINGS */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* TITLE AND SUBTITLE -- H5 IS FOR AUTHOR IN QUOTES SECTION */
+h1, h2, h3, h4, h5 {
+    font-family: 'Aboreto';
+}
+
+/* QUOTES */
+h6 {
+    font-family: 'Explora';
+}
+
+/* TEXT AND PARAGRAPH */
+p {
+  font-family: 'Roboto';
+}
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--ice);
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--indaco);
+  -webkit-border-radius: 1ex;
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--black);
+  display: none;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
