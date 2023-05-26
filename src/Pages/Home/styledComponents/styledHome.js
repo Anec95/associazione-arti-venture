@@ -49,6 +49,20 @@ export const MiddleContainer = styled.div`
     };
     color: var(--black);
     height: max-content;
+
+    @media (max-width: 500px) {
+        width: ${props => props.position === 1 ?
+            "max-content" :
+            "75%"
+        };
+    }
+
+    @media (min-width: 501px) and (max-width: 1000px) {
+        width: ${props => props.position === 1 ?
+            "60%" :
+            "75%"
+        };
+    }
 `
 
 //MAIN STYLES
@@ -57,7 +71,7 @@ export const MainTitle = styled.h1`
     font-size: 100px;
 
     @media (max-width: 500px) {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {
@@ -70,7 +84,7 @@ export const MainSubtitle = styled.h3`
     font-variant: small-caps;
 
     @media (max-width: 500px) {
-        font-size: 14px;
+        font-size: 18px;
     }
 `
 
@@ -78,7 +92,7 @@ export const QuotesContainer = styled.div`
     margin: 50px 10px;
 
     @media (max-width: 500px) {
-        margin: 20px 0;
+        margin: 20px 10px;
         width: 220px;
     }
 
@@ -164,11 +178,11 @@ export const ScheduleSection = styled.section`
     position: relative;
 
     @media (max-width: 500px) {
-        padding: 0 10%;
+        /* padding: 0 10%; */
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {
-        padding: 0 15%;
+        /* padding: 0 15%; */
     }
 `
 
@@ -177,7 +191,7 @@ export const ScheduleTitle = styled.h1`
     margin-bottom: 15px;
 
     @media (max-width: 500px) {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {
@@ -204,7 +218,7 @@ export const ScheduleText = styled.p`
     margin-left: 10px;
 
     @media (max-width: 500px) {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {

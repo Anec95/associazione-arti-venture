@@ -3,22 +3,37 @@ import { styled } from "styled-components";
 
 
 export const ActivitiesDiv = styled.div`
-    
-    ${props => props.expanded ? {
-        zIndex: 8,
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        backgroundColor: "var(--ice)",
-        width: "80vw",
-        height: "80vh"
-        }: {
+    ${
+        props => props.expanded ? 
+        {
+            zIndex: 8,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "var(--ice)",
+            width: "80vw",
+            height: "80vh"
+        }:
+        {
             width: "100%",
             position: "relative"
         }
     }
     transition: 1s;
+
+    @media (max-width: 500px) {
+        ${props => props.expanded ? {
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -60%)"            
+            }: {
+            }
+        }
+    }
+
+    @media (min-width: 501px) and (max-width: 1000px) {
+    } 
 `
 
 export const CarouselTitle = styled.h2`
@@ -27,7 +42,7 @@ export const CarouselTitle = styled.h2`
     cursor: pointer;
 
     @media (max-width: 500px) {
-        font-size: 16px;
+        font-size: ${props => props.expanded ? "30px" : "20px"};
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {
@@ -41,7 +56,8 @@ export const ActivitiesQuotes = styled.h6`
     padding-left: 50px;
 
     @media (max-width: 500px) {
-        font-size: 16px;
+        line-height: 30px;
+        padding-left: 20px;
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {
@@ -56,7 +72,7 @@ export const ActivitiesAuthor = styled.h5`
     font-variant: small-caps;
 
     @media (max-width: 500px) {
-        font-size: 14px;
+        padding-left: 10px;
     }
 
     @media (min-width: 501px) and (max-width: 1000px) {
@@ -80,4 +96,14 @@ export const StyledCarousel = styled(Carousel)`
     background-color: var(--ice-variant);
     border-radius: 15px;
     box-shadow: inset 2px 2px 10px var(--shadow);
+
+    @media (max-width: 500px) {
+        height: 250px;
+        margin: 50px 0;
+        padding-left: 30%;
+    }
+
+    @media (min-width: 501px) and (max-width: 1000px) {
+        font-size: 20px;
+    }
 `
