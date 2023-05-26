@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 export const HomeMain = styled.main`
     width: 100vw;
@@ -212,14 +212,14 @@ export const ScheduleText = styled.p`
     }    
 `
 
-export const ScheduleLink = styled(NavLink)`
-    text-align: end;
-    margin-top: 30px;
+// export const ScheduleLink = styled(NavLink)`
+//     text-align: end;
+//     margin-top: 30px;
 
-    @media (min-width: 501px) and (max-width: 1000px) {
-        font-size: 18px;
-    }  
-`
+//     @media (min-width: 501px) and (max-width: 1000px) {
+//         font-size: 18px;
+//     }  
+// `
 
 export const Separe = styled.hr`
     width: 100%;
