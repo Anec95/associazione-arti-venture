@@ -12,6 +12,7 @@ import { useRef } from "react";
 import ScrollDown from "./components/ScrollDown/ScrollDown";
 import ChiSiamo from "./components/ChiSiamo/ChiSiamo";
 import NuovaEra from "./components/NuovaEra/NuovaEra";
+import Contacts from "./components/Contacts/Contacts";
 
 function useParallax(value, distance) {
     // const x = useMotionValue(value)
@@ -46,6 +47,11 @@ function Schedule(props) {
                 }
                 {props.position === 3 &&
                     <NuovaEra
+                        position={props.position}
+                    />
+                }
+                {props.position === 4 &&
+                    <Contacts
                         position={props.position}
                     />
                 }

@@ -30,6 +30,10 @@ export default function App() {
                 position={3}
             />
 
+            <Schedule
+                position={4}
+            />
+
             <ProgressBar
                 as={motion.div}
                 style={{ scaleX }}
